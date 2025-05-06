@@ -1,0 +1,76 @@
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+/* Tailwind plugin nécessaire ou styles perso */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0A192F;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.text-extralight {
+ 
+  font-weight: 150; /* équivalent à font-extralight */
+  color: rgba(209, 213, 219, 0.6); /* 0.7 correspond à 70% de transparence */
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem; /* Espacement entre les boutons */
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: #333; /* Couleur de fond */
+  color: white;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.social-button:hover {
+  background-color: #0073b1; /* Couleur au survol pour LinkedIn */
+}
+
+.social-button:hover:nth-child(2) {
+  background-color: #e4405f; /* Couleur au survol pour Instagram */
+}
+
+.social-button:hover:nth-child(3) {
+  background-color: #4b4848; /* Couleur au survol pour GitHub */
+}
+
